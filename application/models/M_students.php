@@ -44,4 +44,9 @@ class M_students extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('students');
     }
+
+    public function deleteAll()
+    {
+        $this->db->empty_table('students');
+    }
 }

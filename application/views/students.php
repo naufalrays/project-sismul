@@ -24,4 +24,5 @@
             </div>
             <br>
         <?php endforeach ?>
+        <a class="btn btn-danger" href="<?= site_url('Home/deleteAll') ?>" role="button">Delete All</a>
     </div>

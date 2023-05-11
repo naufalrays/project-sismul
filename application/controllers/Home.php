@@ -122,4 +122,14 @@ class Home extends CI_Controller
 		unlink('./uploads/images/' . $student->filename);
 		redirect('');
 	}
+
+	public function deleteAll()
+	{
+		$students = $this->model->read();
+		foreach ($students as $student) {
+			unlink('./uploads/images/' . $student['filename']);
+		}
+		$this->model->deleteAll();
+		redirect('');
+	}
 }
