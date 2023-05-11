@@ -5,18 +5,19 @@
             <div class="border rounded-4">
                 <div class="row ms-2">
                     <div class="col-sm-1 align-self-center">
-                        <img class="fit-image mt-3 mb-3 center rounded-circle" src=<?= site_url('uploads/images/' .  $student['filename']) ?> alt="">
+                        <img class="mt-3 mb-3 center rounded-circle" src=<?= site_url('uploads/images/' .  $student['filename']) ?> alt="" style="width: 70px; height: 70px;">
                     </div>
                     <div class="col-sm-9 align-self-center">
                         <h5>
                             <?= $student['name'] ?>
+                            (<?= $student['class'] ?>)
                         </h5>
                         <h8>
                             <?= $student['npm'] ?>
                         </h8>
                     </div>
                     <div class="col-sm-2 align-self-center">
-                        <button class="btn btn-primary rounded-3 me-2">Edit</button>
+                        <a class="btn btn-primary" href="<?= site_url('Home/index/' . $student['id']) ?>" role="button">Edit</a>
                         <button class="btn btn-danger rounded-3">Delete</button>
                     </div>
                 </div>

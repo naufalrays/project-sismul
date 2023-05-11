@@ -25,4 +25,17 @@ class M_students extends CI_Model
             return $query->row();
         }
     }
+
+    public function update($id)
+    {
+        $data = array(
+            'id' => $id,
+            'name' => $this->input->post('name', TRUE),
+            'npm' => $this->input->post('npm', TRUE),
+            'class'  => $this->input->post('class', TRUE),
+            'email'  => $this->input->post('email', TRUE),
+        );
+        $this->db->where('id', $id);
+        $this->db->update('students', $data);
+    }
 }
