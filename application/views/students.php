@@ -18,7 +18,7 @@
                     </div>
                     <div class="col-sm-2 align-self-center">
                         <a class="btn btn-primary" href="<?= site_url('Home/index/' . $student['id']) ?>" role="button">Edit</a>
-                        <button class="btn btn-danger rounded-3">Delete</button>
+                        <a class="btn btn-danger" href="<?= site_url('Home/delete/' . $student['id']) ?>" role="button">Delete</a>
                     </div>
                 </div>
             </div>

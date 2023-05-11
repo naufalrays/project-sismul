@@ -38,4 +38,10 @@ class M_students extends CI_Model
         $this->db->where('id', $id);
         $this->db->update('students', $data);
     }
+
+    public function delete($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('students');
+    }
 }

@@ -113,4 +113,13 @@ class Home extends CI_Controller
 			}
 		}
 	}
+
+	public function delete($id)
+	{
+		$student = $this->model->read($id);
+
+		$this->model->delete($id);
+		unlink('./uploads/images/' . $student->filename);
+		redirect('');
+	}
 }
